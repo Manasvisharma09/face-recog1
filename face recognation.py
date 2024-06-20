@@ -10,7 +10,7 @@ video_capture = cv2.VideoCapture(0)
 def load_encode_faces(directory):
     known_face_encodings = []
     known_face_names = []
-
+ 
     # Iterate over files in the directory
     for filename in os.listdir(directory):
         if filename.endswith((".jpg", ".png", ".jpeg", ".jfif")):
@@ -89,6 +89,7 @@ while True:
     
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
+        exit(0);
 
 video_capture.release()
 cv2.destroyAllWindows()
